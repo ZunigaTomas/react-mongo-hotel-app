@@ -23,15 +23,15 @@ function Navbar() {
                 <NavLink to="/home">Hotel Zuniga</NavLink>
             </div>       
             <ul className='navbar-ul'>
-                <li> <NavLink to="/home" activeClass="active"> Home </NavLink> </li>
-                <li> <NavLink to="/rooms" activeClass="active"> Rooms </NavLink> </li>
-                <li> <NavLink to="/find-booking" activeClass="active"> Find my booking </NavLink> </li>
+                <li> <NavLink to="/home" activeclass="active"> Home </NavLink> </li>
+                <li> <NavLink to="/rooms" activeclass="active"> Rooms </NavLink> </li>
+                <li> <NavLink to="/find-booking" activeclass="active"> Find my booking </NavLink> </li>
 
-                { isUser && <li> <NavLink to="/profile" activeClass="active"> Profile </NavLink> </li> }
-                { isAdmin && <li> <NavLink to="/admin" activeClass="active"> Admin </NavLink> </li> }
+                { isUser && <li> <NavLink to="/profile" activeclass="active"> Profile </NavLink> </li> }
+                { isAdmin && <li> <NavLink to="/admin" activeclass="active"> Admin </NavLink> </li> }
                 
-                { !isAuthenticated && <li> <NavLink to="/login" activeClass="active"> Login </NavLink> </li>}
-                { !isAuthenticated && <li> <NavLink to="/register" activeClass="active"> Register </NavLink> </li>}
+                { !isAuthenticated && <li> <NavLink to="/login" activeclass="active"> Login </NavLink> </li>}
+                { !isAuthenticated && <li> <NavLink to="/register" activeclass="active"> Register </NavLink> </li>}
 
                 { isAuthenticated && <li onClick={handleLogout}> Logout </li>}
             </ul>

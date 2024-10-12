@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default class ApiService {
     
-    static BASE_URL = "http://localhost:4040"
+    static BASE_URL = "https://spring-mongo-hotel-latest.onrender.com"
 
     static getHeader() {
         const token = localStorage.getItem("token");
@@ -83,9 +83,9 @@ export default class ApiService {
     static async getAvailableRoomsByDateAndType(checkInDate, checkOutDate, roomType) {
         const result = await axios.get(
             `${this.BASE_URL}/rooms/available-rooms-by-date-and-type?checkInDate=${checkInDate}
-            &checkOutDate=${checkOutDate}&roomType=${roomType}`
-        );
-        return result.data;
+		&checkOutDate=${checkOutDate}&roomType=${roomType}`
+        )
+        return result.data
     }
 
     /* CRUD rooms */
