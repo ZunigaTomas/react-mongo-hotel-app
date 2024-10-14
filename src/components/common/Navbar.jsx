@@ -20,7 +20,7 @@ function Navbar() {
     return (
         <nav className='navbar'>
             <div className='navbar-brand'>
-                <NavLink to="/home">Hotel Zuniga</NavLink>
+                <NavLink to="/home">Zuniga Hotel</NavLink>
             </div>       
             <ul className='navbar-ul'>
                 <li> <NavLink to="/home" activeclass="active"> Home </NavLink> </li>
@@ -33,7 +33,7 @@ function Navbar() {
                 { !isAuthenticated && <li> <NavLink to="/login" activeclass="active"> Login </NavLink> </li>}
                 { !isAuthenticated && <li> <NavLink to="/register" activeclass="active"> Register </NavLink> </li>}
 
-                { isAuthenticated && <li onClick={handleLogout}> Logout </li>}
+                { isAuthenticated && <li onClick={handleLogout} style={{cursor: 'pointer'}}> Logout </li>}
             </ul>
         </nav>
     )

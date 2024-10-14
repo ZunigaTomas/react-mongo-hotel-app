@@ -20,7 +20,6 @@ const LoginPage = () => {
         }
 
         try {
-            console.log("entre man")
             const response = await ApiService.loginUser({email, password});
             if(response.statusCode === 200) {
                 localStorage.setItem('token', response.token);
